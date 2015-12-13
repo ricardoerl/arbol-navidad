@@ -4,22 +4,36 @@ var colores = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","B
 // Vector con todos los adornos
 var adornos = document.getElementsByClassName("adorno");
 
+// Variables con el elemento estrella
+var estrella = document.getElementById("estrella");
+
 // Asignamos el evento click a cada adorno con la funcion de cambiar color
 for( var i=0; i<adornos.length; i++){
     adornos[i].addEventListener('click', changeColorBackground, false);
 }
 
+// Asignamos el evento click a la estrella con la funcion de cambiar el color a todos los adornos al mismo tiempo
+estrella.addEventListener('click', changeColorDisco, false);
+
 // Funcion para cambiar color
-function changeColorBackground() {
+function changeColorBackground () {
 	var num = getRandomNumber(0, colores.length - 1);
     this.style.backgroundColor = colores[num];
 };
 
 // Funcion para obtener un numero aleatorio
-function getRandomNumber(min, max) {
+function getRandomNumber (min, max) {
   var offset = min;
   var range = (max - min) + 1;
 
   var randomNumber = Math.floor( Math.random() * range) + offset;
   return randomNumber;
+}
+
+// Funcion para cambiar el color de todos los adornos al mismo tiempo
+function changeColorDisco (){
+	for( var i=0; i<adornos.length; i++){
+		var num = getRandomNumber(0, colores.length - 1);
+	    adornos[i].style.backgroundColor = colores[num];
+	}
 }
