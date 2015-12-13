@@ -1,0 +1,112 @@
+body {
+	background-color: #80D8FF;
+	background: radial-gradient(circle at center,  #ffffff 0%,#80d8ff 100%);
+}
+
+
+#arbol {
+	width: 700px;
+	height: 600px;
+	position: relative;
+	margin: 150px auto 0;
+	text-align: center;
+	/*background-color: #000;*/
+}
+	/* Hojas del árbol */
+	.hojas {
+		width: 0;
+		height: 0;
+		position: absolute;
+		left: 50%;
+		z-index: 1;
+	}
+		.hojas-1 {
+			top: 0; 
+			margin-left: -100px;
+			border-left: 100px solid transparent;
+			border-right: 100px solid transparent;
+			border-bottom: 150px solid #388E3C;
+		}
+		.hojas-2 {
+			top: 50px;
+			margin-left: -150px;
+			border-left: 150px solid transparent;
+			border-right: 150px solid transparent;
+			border-bottom: 200px solid #388E3C;
+		}
+		.hojas-3 {
+			top: 100px;
+			margin-left: -200px;
+			border-left: 200px solid transparent;
+			border-right: 200px solid transparent;
+			border-bottom: 250px solid #388E3C;
+		}
+		.hojas-4 {
+			top: 150px;
+			margin-left: -250px;
+			border-left: 250px solid transparent;
+			border-right: 250px solid transparent;
+			border-bottom: 300px solid #388E3C;
+		}
+		.tronco {
+			width: 75px;
+			height: 100px;
+			position: absolute;
+			top: 450px;
+			left: 50%;
+			margin-left: -37.5px;
+			background-color: #6D4C41;
+		}
+
+	/* Adornos del árbol */
+	.adorno {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: #000;
+		position: absolute;
+		left: 50%;
+		z-index: 9999;
+	}
+		#adorno-1 {
+			top: 75px;
+			margin-left: -65px;
+		}
+		#adorno-2 {
+			top: 175px;
+			margin-left: -15px;
+		}
+		#adorno-3 {
+			top: 250px;
+			margin-left: -120px;
+		}
+		#adorno-4 {
+			top: 300px;
+			margin-left: -15px;
+		}
+		#adorno-5 {
+			top: 230px;
+			margin-left: 70px;
+		}
+		#adorno-6 {
+			top: 360px;
+			margin-left: -135px;
+		}
+		#adorno-7 {
+			top: 390px;
+			margin-left: 35px;
+		}
+		#adorno-8 {
+			top: 370px;
+			margin-left: 145px;
+		}
+	
+	/* Estrella */
+	#estrella {
+		font-size: 100px;
+		color: #FFEA00;
+		position: relative;
+		z-index: 2;
+		top: -75px;
+	}
+		
